@@ -1,6 +1,7 @@
 const express = require("express");
 const { connect } = require("./connection");
 const urlRouter = require("./routes/url");
+const customURLRouter = require("./routes/custom-url");
 const URL = require("./models/short-url-schema");
 
 const app = express();
@@ -18,7 +19,9 @@ connect("mongodb://127.0.0.1:27017/short-url")
   });
 
 app.use(express.json());
+
 app.use("/url", urlRouter);
+
 app.get("/:id", async (req, res) => {
   const shortURL = req.params.id;
   const longURL = await URL.findOneAndUpdate(
@@ -27,3 +30,5 @@ app.get("/:id", async (req, res) => {
   );
   return res.redirect(longURL.url);
 });
+
+app.use("/custom-url", customURLRouter);
