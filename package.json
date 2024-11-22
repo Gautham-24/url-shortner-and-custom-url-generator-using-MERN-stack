@@ -1,0 +1,26 @@
+{
+  "name": "short-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gautham-24/short_url_generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gautham-24/short_url_generator/issues"
+  },
+  "homepage": "https://github.com/Gautham-24/short_url_generator#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongoose": "^8.8.2",
+    "nanoid": "^5.0.8",
+    "nodemon": "^3.1.7",
+    "shortid": "^2.2.16"
+  }
+}
